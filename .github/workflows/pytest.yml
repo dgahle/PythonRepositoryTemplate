@@ -38,4 +38,4 @@ jobs:
       - name: Run pytests
         run: |
           pip install pytest pytest-azurepipelines
-          PYTHONPATH=. pytest.
+          PYTHONPATH=. pytest
