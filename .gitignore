@@ -1,3 +1,13 @@
+# This repo
+# Files
+config.json
+# Folders
+input
+output
+
+# Pycharm
+.idea
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
