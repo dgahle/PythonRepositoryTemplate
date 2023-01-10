@@ -9,8 +9,8 @@ logger = get_logger(Path(__file__).name)
 
 # Functions and classes
 def main() -> None:
-    logger.log('Started main!')
-    logger.log('Completed main!')
+    logger.info('Started main!')
+    logger.info('Completed main!')
     pass
 
 
