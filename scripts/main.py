@@ -1,9 +1,10 @@
 # Imports
 from backend import get_logger
+from pathlib import Path
 
 
 # Variables
-logger = get_logger(__file__.name)
+logger = get_logger(Path(__file__).name)
 
 
 # Functions and classes
