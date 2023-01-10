@@ -28,6 +28,13 @@ jobs:
         with: 
           python-version: '3.8'
 
+      # Setting up the repo directories and user config.json
+      - name: Set up repo
+        run: |
+          mkdir input
+          mkdir output
+          cp metadata/config.json config.json
+
       # Runs a single command using the runners shell
       - name: Install dependencies
         run: |
@@ -37,5 +44,4 @@ jobs:
       # Runs a set of commands using the runners shell
       - name: Run pytests
         run: |
-          pip install pytest pytest-azurepipelines
           PYTHONPATH=. pytest
