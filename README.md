@@ -6,22 +6,29 @@ Step:
 1. Set up the repo/project
 2. Develop!
 
-__Requesting changes:__ Raise an issue on the GitHub repository page and describes the error or the desired functionality, 
-ideally with test data that can be used to make tutorials and unit tests.
+__Requesting changes:__ Raise an issue on the GitHub repository page and describes the error or the desired 
+functionality, ideally with test data that can be used to make tutorials and unit tests.
 
-## Getting Started
-TODO: Guide users through getting your code up and running on their own system. In this section you can talk about:
-1.	Installation process
-2.	Software dependencies
-3.	Latest releases
-4.	API references
+## Getting Started (Build, Test, and Run)
 
-## Build and Test
-TODO: Describe and show how to build your code and run the tests. 
+This example repo has been written in Python 3.9 and the dependencies are listed in requirements.txt.
+The script setup_project.sh will build the conda environment, install dependencies, and create the input/output folders 
+and the configuration file.
+The actions the of setup_project.sh are:
+1. Create virtual python environment:
+`conda create -n PythonRepositoryTemplate python=3.9 --yes`
+2. Install the dependencies:
+`pip install -r requirements.txt`
+3. Setting up the repo directories:
+`mkdir input, output`
+4. Create config.JSON for the user (copy from metadata):
+`cp metadata/config.json config.json`
+5. Test repo setup:
+`PYTHONPATH=. pytest`
 
-## Python Environment
-
-Python 3.8 is used here so there is forward compatibility up to Python 3.12
+Now the repository is locally set up you can run `scripts/main.py` which is a template for scripts and modules.
+To run from the console run `PYTHONPATH=. python scripts/main.py`, within the virtual environment 
+(`conda activate PythonRepositoryTemplate`).
 
 ## How to Contribute
 
