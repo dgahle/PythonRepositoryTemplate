@@ -1,5 +1,8 @@
 # Python Repository Template
 
+![Python Version](https://img.shields.io/badge/python->=3.9-blue)
+[![GitHub license](https://img.shields.io/badge/license-MIT-blue)](https://github.com/dgahle/PythonRepositoryTemplate/blob/main/LICENSE)
+
 This repository provides a template structure a software development project with some python functionality that is 
 generally usefully (demonstrated in `scripts/main.py`).
 This includes:
