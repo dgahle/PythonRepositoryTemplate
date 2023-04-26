@@ -1,5 +1,6 @@
 # Python Repository Template
 
+![example workflow](https://github.com/dgahle/PythonRepositoryTemplate/actions/workflows/pytest.yml/badge.svg?branch=main)
 ![Python Version](https://img.shields.io/badge/python->=3.9-blue)
 [![GitHub license](https://img.shields.io/badge/license-MIT-blue)](https://github.com/dgahle/PythonRepositoryTemplate/blob/main/LICENSE)
 
