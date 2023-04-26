@@ -1,5 +1,5 @@
 # Imports
-from backend import get_logger
+from backend import get_logger, TimeIt
 from pathlib import Path
 
 
@@ -8,6 +8,7 @@ logger = get_logger(Path(__file__).name)
 
 
 # Functions and classes
+@TimeIt
 def main() -> None:
     logger.info('Started main!')
     logger.debug('This is a debug message')
