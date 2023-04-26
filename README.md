@@ -6,6 +6,9 @@ Step:
 1. Set up the repo/project
 2. Develop!
 
+__Requesting changes:__ Raise an issue on the GitHub repository page and describes the error or the desired functionality, 
+ideally with test data that can be used to make tutorials and unit tests.
+
 ## Getting Started
 TODO: Guide users through getting your code up and running on their own system. In this section you can talk about:
 1.	Installation process
