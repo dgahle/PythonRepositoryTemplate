@@ -1,10 +1,14 @@
 # Python Repository Template
 
-TODO: Give a short introduction of your project. Let this section explain the objectives or the motivation behind this project. 
+This repository provides a template structure a software development project with some python functionality that is 
+generally usefully (demonstrated in `scripts/main.py`).
+This includes:
+- Folder structure
+- Python script template (`scripts/main.py`)
+- PyTest example (`tests/test_main.py`)
+- GitHub Actions example (`.github/workflows/pytest.yml`)
 
-Step:
-1. Set up the repo/project
-2. Develop!
+As well as tracking information in `.gitignore` and python dependencies `requirements.txt`.
 
 __Requesting changes:__ Raise an issue on the GitHub repository page and describes the error or the desired 
 functionality, ideally with test data that can be used to make tutorials and unit tests.
