@@ -3,9 +3,9 @@
 [![example workflow](https://github.com/dgahle/PythonRepositoryTemplate/actions/workflows/pytest.yml/badge.svg?branch=main)](https://github.com/dgahle/PythonRepositoryTemplate/actions/workflows/pytest.yml)
 ![Python Version](https://img.shields.io/badge/python->=3.9-blue)
 [![GitHub license](https://img.shields.io/badge/license-MIT-blue)](https://github.com/dgahle/PythonRepositoryTemplate/blob/main/LICENSE)
-![GitHub issues open](https://img.shields.io/github/issues-raw/dgahle/PythonRepositoryTemplate?style=flat)
-![GitHub issues closed](https://img.shields.io/github/issues-closed-raw/dgahle/PythonRepositoryTemplate?style=flat)
-![GitHub PR closed](https://img.shields.io/github/issues-pr-closed/dgahle/PythonRepositoryTemplate)
+[![GitHub issues open](https://img.shields.io/github/issues-raw/dgahle/PythonRepositoryTemplate?style=flat)](https://github.com/dgahle/PythonRepositoryTemplate/issues?q=is%3Aissue+is%3Aopen)
+[![GitHub issues closed](https://img.shields.io/github/issues-closed-raw/dgahle/PythonRepositoryTemplate?style=flat)](https://github.com/dgahle/PythonRepositoryTemplate/issues?q=is%3Aissue+is%3Aclosed)
+[![GitHub PR closed](https://img.shields.io/github/issues-pr-closed/dgahle/PythonRepositoryTemplate)](https://github.com/dgahle/PythonRepositoryTemplate/pulls?q=is%3Apr+is%3Aclosed)
 
 This repository provides a template structure a software development project with some python functionality that is 
 generally usefully (demonstrated in `scripts/main.py`).
