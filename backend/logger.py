@@ -3,26 +3,25 @@
 ########################################################################################################################
 #
 # Imports
+import logging
 from datetime import datetime
 from json import load
-import logging
 from pathlib import Path
-from tqdm import tqdm
 
+from tqdm import tqdm
 
 # Variables
 # Load config
 REPO_PATH: Path = Path(__file__).parent.parent
-CONFIG_PATH: Path = REPO_PATH / 'config.json'
-with open(CONFIG_PATH, 'r') as f:
+CONFIG_PATH: Path = REPO_PATH / "config.json"
+with open(CONFIG_PATH, "r") as f:
     CONFIG_DICT = load(f)
 # Paths
-OUTPUT_PATH: Path = REPO_PATH / 'output'
+OUTPUT_PATH: Path = REPO_PATH / "output"
 # Logger
 logger_datefmt = "%Y-%m-%d %H:%M:%S"
-log_msg_format = '%(asctime)s - %(name)s - %(levelname)s - %(message)s'
-logger_format_dict = {'format': log_msg_format,
-                      'datefmt': logger_datefmt     }
+log_msg_format = "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+logger_format_dict = {"format": log_msg_format, "datefmt": logger_datefmt}
 datetime_datefmt = "%Y%m%d_%H%M%S"
 timestamp = datetime.now().strftime(datetime_datefmt)
 logger_path = OUTPUT_PATH / f"{CONFIG_DICT['report_name']}_{timestamp}.log"
@@ -30,7 +29,6 @@ logger_path = OUTPUT_PATH / f"{CONFIG_DICT['report_name']}_{timestamp}.log"
 
 # Functions and classes
 class TqdmLoggingHandler(logging.Handler):
-
     def __init__(self, level=logging.NOTSET):
         super().__init__(level)
 
@@ -43,7 +41,9 @@ class TqdmLoggingHandler(logging.Handler):
             self.handleError(record)
 
 
-def get_logger(name: str, set_cmd: bool = True, set_path: bool = True) -> logging.Logger:
+def get_logger(
+    name: str, set_cmd: bool = True, set_path: bool = True
+) -> logging.Logger:
     """
     Set up the logging module for the model run.
 
@@ -82,7 +82,7 @@ def get_logger(name: str, set_cmd: bool = True, set_path: bool = True) -> loggin
 def main() -> None:
     filename: str = Path(__file__).name
     logger = get_logger(filename, set_path=False)
-    log_msg: str = f'Running main()'
+    log_msg: str = f"Running main()"
     logger.info(log_msg)
     logger.debug(log_msg)
     logger.warning(log_msg)

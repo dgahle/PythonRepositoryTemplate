@@ -1,8 +1,10 @@
 # Python Repository Template
 
 [![example workflow](https://github.com/dgahle/PythonRepositoryTemplate/actions/workflows/pytest.yml/badge.svg?branch=main)](https://github.com/dgahle/PythonRepositoryTemplate/actions/workflows/pytest.yml)
-![Python Version](https://img.shields.io/badge/python->=3.9-blue)
+[![Python Version](https://img.shields.io/badge/python->=3.9-blue)](https://www.python.org/downloads/release/python-390/)
 [![GitHub license](https://img.shields.io/badge/license-MIT-blue)](https://github.com/dgahle/PythonRepositoryTemplate/blob/main/LICENSE)
+[![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
+[![Imports: isort](https://img.shields.io/badge/%20imports-isort-%231674b1?style=flat&labelColor=ef8336)](https://pycqa.github.io/isort/)
 [![GitHub issues open](https://img.shields.io/github/issues-raw/dgahle/PythonRepositoryTemplate?style=flat)](https://github.com/dgahle/PythonRepositoryTemplate/issues?q=is%3Aissue+is%3Aopen)
 [![GitHub issues closed](https://img.shields.io/github/issues-closed-raw/dgahle/PythonRepositoryTemplate?style=flat)](https://github.com/dgahle/PythonRepositoryTemplate/issues?q=is%3Aissue+is%3Aclosed)
 [![GitHub PR closed](https://img.shields.io/github/issues-pr-closed/dgahle/PythonRepositoryTemplate)](https://github.com/dgahle/PythonRepositoryTemplate/pulls?q=is%3Apr+is%3Aclosed)
@@ -65,6 +67,16 @@ does and lists the inputs, outputs, and exceptions that could be raised. This is
 repository.
 - An example of using the function - This will be used for automated testing to ensure functionality is maintained with
 changes in the repo and to write the tutorial in the document.
+
+`isort` and `black` are used to aid code format standardisation. 
+This can be done from the comand line using:
+
+```
+python -m black .
+python -m isort .
+```
+
+The configuration for `isort` and `black` are in `pyproject.toml`.  
 
 ### Testing
 
