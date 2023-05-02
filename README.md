@@ -68,6 +68,16 @@ repository.
 - An example of using the function - This will be used for automated testing to ensure functionality is maintained with
 changes in the repo and to write the tutorial in the document.
 
+`isort` and `black` are used to aid code format standardisation. 
+This can be done from the comand line using:
+
+```
+python -m black .
+python -m isort .
+```
+
+The configuration for `isort` and `black` are in `pyproject.toml`.  
+
 ### Testing
 
 Unit tests should be written to verify that the examples meet their objectives.  
