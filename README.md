@@ -1,7 +1,7 @@
 # Python Repository Template
 
 [![example workflow](https://github.com/dgahle/PythonRepositoryTemplate/actions/workflows/pytest.yml/badge.svg?branch=main)](https://github.com/dgahle/PythonRepositoryTemplate/actions/workflows/pytest.yml)
-![Python Version](https://img.shields.io/badge/python->=3.9-blue)
+[![Python Version](https://img.shields.io/badge/python->=3.9-blue)](https://www.python.org/downloads/release/python-390/)
 [![GitHub license](https://img.shields.io/badge/license-MIT-blue)](https://github.com/dgahle/PythonRepositoryTemplate/blob/main/LICENSE)
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 [![Imports: isort](https://img.shields.io/badge/%20imports-isort-%231674b1?style=flat&labelColor=ef8336)](https://pycqa.github.io/isort/)
