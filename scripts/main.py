@@ -1,7 +1,7 @@
 # Imports
+from backend import TimeIt, get_logger
 from pathlib import Path
 
-from backend import TimeIt, get_logger
 
 # Variables
 logger = get_logger(Path(__file__).name)
