@@ -1,6 +1,7 @@
 # Python Repository Template
 
-[![example workflow](https://github.com/dgahle/PythonRepositoryTemplate/actions/workflows/pytest.yml/badge.svg?branch=main)](https://github.com/dgahle/PythonRepositoryTemplate/actions/workflows/pytest.yml)
+[![GitHub Action PyTests](https://github.com/dgahle/PythonRepositoryTemplate/actions/workflows/pytest.yml/badge.svg?branch=main)](https://github.com/dgahle/PythonRepositoryTemplate/actions/workflows/pytest.yml)
+[![GitHub Action Linting](https://github.com/dgahle/PythonRepositoryTemplate/actions/workflows/linting.yml/badge.svg?branch=main)](https://github.com/dgahle/PythonRepositoryTemplate/actions/workflows/linting.yml)
 [![Python Version](https://img.shields.io/badge/python->=3.9-blue)](https://www.python.org/downloads/release/python-390/)
 [![GitHub license](https://img.shields.io/badge/license-MIT-blue)](https://github.com/dgahle/PythonRepositoryTemplate/blob/main/LICENSE)
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
