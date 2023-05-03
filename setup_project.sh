@@ -7,8 +7,8 @@
 
 ### Setting up the python environment
 source /c/ProgramData/Anaconda3/etc/profile.d/conda.sh
-conda create -n MyVirEnv python=3.10 --yes
-conda activate MyVirEnv
+conda create -n PythonRepositoryTemplate python=3.9 --yes
+conda activate PythonRepositoryTemplate
 pip install -r requirements.txt
 
 ### Setting up the repo directories
