@@ -1,5 +1,4 @@
 # Imports
-from json import load
 from logging import Logger
 from pathlib import Path
 from time import perf_counter_ns
