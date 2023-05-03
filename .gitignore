@@ -1,6 +1,7 @@
 # This repo
 # Files
 config.json
+**/*tmp.*
 # Folders
 input
 output
