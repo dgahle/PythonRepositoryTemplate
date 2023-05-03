@@ -27,19 +27,20 @@ def runtime_to_msg(runtime: int) -> str:
         runtime: float = 1e-9 * runtime
         return f"Runtime is {runtime:.3f} s!"
 
-    # Minutes check
-    if runtime < ns_per_hour:
-        minutes: float = runtime / ns_per_minute
-        seconds_ns: float = runtime - (minutes * ns_per_minute)
-        seconds: float = 1e-9 * seconds_ns
-        seconds_ms: float = 1e-9 * seconds_ns - seconds
-        hours: int = 0
-        return f"Runtime is {hours:02}:{minutes:02}:{seconds:02}.{seconds_ms:.3f}!"
+    # Clock format
+    # Hours
+    hours: int = int(runtime / ns_per_hour)
+    remainder: float = runtime / ns_per_hour - hours
+    # Minutes
+    minutes: int = int(runtime / ns_per_minute)
+    remainder: float = runtime / ns_per_minute - minutes
+    # Seconds
+    seconds: int = int(1e-9 * runtime)
+    remainder_s: float = 1e-9 * runtime - seconds
+    # Milliseconds
+    seconds_ms: int = round(1e3 * remainder_s)
 
-    # Hour check
-    raise NotImplementedError(
-        f"Runtime is {runtime / ns_per_hour} hrs"
-    )
+    return f"Runtime is {hours:02}:{minutes:02}:{seconds:02}.{seconds_ms:03}!"
 
 
 class TimeIt:
