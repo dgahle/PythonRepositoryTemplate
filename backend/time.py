@@ -1,5 +1,4 @@
 # Imports
-from json import load
 from logging import Logger
 from pathlib import Path
 from time import perf_counter_ns
@@ -11,8 +10,7 @@ logger: Logger = get_logger(Path(__file__).name)
 
 
 # Functions
-def runtime_to_msg(runtime: int, n_decimal: int = 3) -> str:
-    n_decimal += 1
+def runtime_to_msg(runtime: int) -> str:
     # Time unit conversions
     ns_per_minute: int = 60000000000
     ns_per_hour: int = 3600000000000
@@ -20,28 +18,29 @@ def runtime_to_msg(runtime: int, n_decimal: int = 3) -> str:
     if runtime < 1e2:
         return f"Runtime is {runtime} ns!"
     elif runtime < 1e5:
-        runtime: float = round(1e-3 * runtime, n_decimal)
-        return f"Runtime is {runtime} us!"
+        runtime: float = 1e-3 * runtime
+        return f"Runtime is {runtime:.3f} us!"
     elif runtime < 1e8:
-        runtime: float = round(1e-6 * runtime, n_decimal)
-        return f"Runtime is {runtime} ms!"
+        runtime: float = 1e-6 * runtime
+        return f"Runtime is {runtime:.3f} ms!"
     elif runtime < ns_per_minute:
-        runtime: float = round(1e-9 * runtime, n_decimal)
-        return f"Runtime is {runtime} s!"
+        runtime: float = 1e-9 * runtime
+        return f"Runtime is {runtime:.3f} s!"
 
-    # Minutes check
-    if runtime < ns_per_hour:
-        minutes: int = int(runtime // ns_per_minute)
-        seconds_ns: float = runtime - (minutes * ns_per_minute)
-        seconds: int = int(1e-9 * seconds_ns)
-        seconds_ms: int = round(1e-9 * seconds_ns - seconds)
-        hours: int = 0
-        return f"Runtime is {hours:02}:{minutes:02}:{seconds:02}.{seconds_ms:03}!"
+    # Clock format
+    # Hours
+    hours: int = int(runtime / ns_per_hour)
+    remainder: float = runtime / ns_per_hour - hours
+    # Minutes
+    minutes: int = int(runtime / ns_per_minute)
+    remainder: float = runtime / ns_per_minute - minutes
+    # Seconds
+    seconds: int = int(1e-9 * runtime)
+    remainder_s: float = 1e-9 * runtime - seconds
+    # Milliseconds
+    seconds_ms: int = round(1e3 * remainder_s)
 
-    # Hour check
-    raise NotImplementedError(
-        f"Runtime is {round(runtime / ns_per_hour, n_decimal)} hrs"
-    )
+    return f"Runtime is {hours:02}:{minutes:02}:{seconds:02}.{seconds_ms:03}!"
 
 
 class TimeIt:
