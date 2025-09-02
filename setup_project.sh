@@ -6,10 +6,9 @@
 ########################################################################################################################
 
 ### Setting up the python environment
-source /c/ProgramData/Anaconda3/etc/profile.d/conda.sh
-conda create -n PythonRepositoryTemplate python=3.9 --yes
-conda activate PythonRepositoryTemplate
-pip install -r requirements.txt
+# source /c/ProgramData/Anaconda3/etc/profile.d/conda.sh
+conda create -p ./.venv python=3.9 --yes
+.venv/bin/python -m pip install -r requirements.txt
 
 ### Setting up the repo directories
 mkdir input
@@ -19,4 +18,4 @@ mkdir output
 cp metadata/config.json config.json
 
 ### Test repo setup
-source run_pytests.sh
+source run_pytests.sh  # PYTHONPATH=. .venv/bin/python -m pytest
