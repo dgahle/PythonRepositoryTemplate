@@ -1,0 +1,49 @@
+{
+  // Schema version for debug configs — always stays at "0.2.0"
+  "version": "0.2.0",
+
+  // List of run/debug configurations
+  "configurations": [
+    {
+      // Friendly name shown in VS Code debugger dropdown
+      "name": "Python: Run current file",
+
+      // Debugger type (Python in this case)
+      "type": "python",
+
+      // "launch" = start a program, "attach" = attach to an existing process
+      "request": "launch",
+
+      // Program to run — here it means "the file that’s open in the editor"
+      "program": "${file}",
+
+      // Run in the integrated terminal (respects conda/venv activation)
+      "console": "integratedTerminal",
+
+      // Ensure src/ is on sys.path while debugging
+      "env": {
+        "PYTHONPATH": "${workspaceFolder}/"
+      }
+    },
+    {
+      "name": "Python: Run tests",
+      "type": "python",
+      "request": "launch",
+
+      // Use pytest as the entry point instead of a file
+      "module": "pytest",
+
+      // Pass arguments to pytest
+      "args": [
+        "-q",                        // quiet mode
+        "${workspaceFolder}/tests"   // path to tests
+      ],
+
+      "console": "integratedTerminal",
+
+      "env": {
+        "PYTHONPATH": "${workspaceFolder}/"
+      }
+    }
+  ]
+}

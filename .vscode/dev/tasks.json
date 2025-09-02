@@ -1,0 +1,27 @@
+{
+  // Schema version for tasks — always "2.0.0" for modern VS Code
+  "version": "2.0.0",
+
+  // List of custom shell tasks you can run via Terminal → Run Task
+  "tasks": [
+    {
+      // Friendly name shown in task picker
+      "label": "Install requirements",
+
+      // Task type: run a shell command
+      "type": "shell",
+
+      // Command to execute (here: install deps inside the venv)
+      "command": "${workspaceFolder}/.venv/bin/pip install -r requirements.txt",
+
+      // Problem matcher is for parsing compiler errors — empty = no parsing
+      "problemMatcher": []
+    },
+    {
+      "label": "Run tests",
+      "type": "shell",
+      "command": "${workspaceFolder}/.venv/bin/pytest tests",
+      "problemMatcher": []
+    }
+  ]
+}
