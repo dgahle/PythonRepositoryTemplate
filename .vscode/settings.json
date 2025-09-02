@@ -1,0 +1,19 @@
+{
+  // Path to your project’s Python interpreter (usually virtualenv or conda)
+  "python.defaultInterpreterPath": "${workspaceFolder}/.venv/bin/python",
+
+  // Ensures the terminal auto-activates the interpreter when opened
+  "python.terminal.activateEnvironment": true,
+
+  // Add src/ folder to module search path (so you can do `import mypackage`)
+  "terminal.integrated.env.osx": {
+    "PYTHONPATH": "${workspaceFolder}/"
+  },
+
+  // Code formatting/linting preferences
+  "python.formatting.provider": "black",  // use Black formatter
+  "editor.formatOnSave": true,            // format automatically when saving
+  "python.linting.enabled": true,         // enable linting
+  "python.linting.pylintEnabled": true,   // enable pylint
+  "python.linting.mypyEnabled": true      // enable mypy type checking
+}
