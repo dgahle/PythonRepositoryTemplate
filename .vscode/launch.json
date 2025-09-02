@@ -9,7 +9,7 @@
       "name": "Python: Run current file",
 
       // Debugger type (Python in this case)
-      "type": "python",
+      "type": "debugpy",
 
       // "launch" = start a program, "attach" = attach to an existing process
       "request": "launch",
@@ -27,7 +27,7 @@
     },
     {
       "name": "Python: Run tests",
-      "type": "python",
+      "type": "debugpy",
       "request": "launch",
 
       // Use pytest as the entry point instead of a file
